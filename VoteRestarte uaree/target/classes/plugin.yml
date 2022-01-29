@@ -1,0 +1,9 @@
+name: VoteRestart
+version: '1.0-SNAPSHOT'
+main: com.orang3i.voterestart
+api-version: 1.18
+authors: [ ORANG3I ]
+description: a plugin to restart server by vote
+
+depend:
+  - UltimateAutoRestart
