@@ -1,3 +1,4 @@
+com\orang3i\Logger.class
 com\orang3i\iridium\GradientPattern.class
 com\orang3i\voting\VoteExecutor.class
 com\orang3i\iridium\SolidPattern.class
@@ -7,5 +8,7 @@ com\orang3i\iridium\Pattern.class
 com\orang3i\iridium\IridiumColorAPI.class
 com\orang3i\commands\CommandBase.class
 com\orang3i\iridium\RainbowPattern.class
+com\orang3i\Logger$1.class
 com\orang3i\voting\VotingLogic$1.class
 com\orang3i\voting\VotingLogic.class
+com\orang3i\Logger$LogLevel.class

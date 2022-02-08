@@ -57,12 +57,12 @@ public   class VotingLogic {
                         ++VOTEONE;
 
 
-                    if (rs1vb == true) {
+                    if (rs1vb) {
                        Bukkit.broadcastMessage(IridiumColorAPI.process(rs1v));
                     }else {
 
 
-                        Bukkit.broadcastMessage(IridiumColorAPI.process("<GRADIENT:9281fb>someone has voted to delay</GRADIENT:eb93fc>" + " " + "<GRADIENT:9281fb>now there are</GRADIENT:eb93fc>" + " " + " " + VOTEONE + " " + "<GRADIENT:9281fb>votes</GRADIENT:eb93fc>" + " " + vote_valuex + " " + "<GRADIENT:9281fb>required to delay</GRADIENT:eb93fc>"));
+                        Bukkit.broadcastMessage(IridiumColorAPI.process("<GRADIENT:9281fb>VoteRestart</GRADIENT:eb93fc>" + " " + "<SOLID:FFFFFF>»" + " " + "someone has voted to delay" + " " + "now there are" + " " + " " + VOTEONE + " " + "votes" + " " + vote_valuex + " " + "required to delay"));
                     }
                     Player player = (Player) sender;
                         PermissionAttachment attachment = player.addAttachment(plugin,1200);
@@ -74,11 +74,12 @@ public   class VotingLogic {
                         for (Player player : Bukkit.getOnlinePlayers()) {
 
                             double delaye = delay / 60;
-                            if (rs1db == true) {
+                            if (rs1db) {
                                 player.sendMessage(IridiumColorAPI.process(rs1d));
                             }else {
-                                player.sendMessage(IridiumColorAPI.process("<GRADIENT:9281fb>number of votes to restart reached delaying restart by</GRADIENT:eb93fc>" + " " + delaye + " " + "<GRADIENT:9281fb>minutes</GRADIENT:eb93fc>"));
+                                player.sendMessage(IridiumColorAPI.process("<GRADIENT:9281fb>VoteRestart</GRADIENT:eb93fc>" + " " + "<SOLID:FFFFFF>»" + " " + "number of votes to restart reached delaying restart by" + " " + delaye + " " + "minutes"));
                             }
+                        VOTEONE = 0;
                             UARAPI.setInterval(UltimateAutoRestart.getInstance(), delay);
                         }
 
@@ -96,10 +97,10 @@ public   class VotingLogic {
                         for (Player player : Bukkit.getOnlinePlayers()) {
 
                             double perce = Math.round(VOTEE);
-                if (rs2vb == true) {
+                if (rs2vb) {
                     player.sendMessage(IridiumColorAPI.process(rs2v));
                 }else {
-                    player.sendMessage(IridiumColorAPI.process("<GRADIENT:9281fb>someone has voted to delay</GRADIENT:eb93fc>" + " " + "<GRADIENT:9281fb>now there are</GRADIENT:eb93fc>" + " " + perce + "%" + " " + "<GRADIENT:9281fb>votes</GRADIENT:eb93fc>" + " " + perc + "%" + " " + "<GRADIENT:9281fb>required to delay</GRADIENT:eb93fc>"));
+                    player.sendMessage(IridiumColorAPI.process("<GRADIENT:9281fb>VoteRestart</GRADIENT:eb93fc>" + " " + "<SOLID:FFFFFF>»" + " " + "someone has voted to delay" + " " + "now there are" + " " + perce + "%" + " " + "votes" + " " + perc + "%" + " " + "required to delay"));
                 }
                         }
 
@@ -113,10 +114,10 @@ public   class VotingLogic {
 
 
                             double delaye = delay / 60;
-                       if (rs2db == true) {
+                       if (rs2db) {
                            player.sendMessage(IridiumColorAPI.process(rs2d));
                        }else {
-                           player.sendMessage(IridiumColorAPI.process("<GRADIENT:9281fb>percentage  of votes to restart reached delaying restart by</GRADIENT:eb93fc>" + " " + delaye + " " + "<GRADIENT:9281fb>minutes</GRADIENT:eb93fc>"));
+                           player.sendMessage(IridiumColorAPI.process("<GRADIENT:9281fb>VoteRestart</GRADIENT:eb93fc>" + " " + "<SOLID:FFFFFF>»" + " " + "percentage  of votes to restart reached delaying restart by" + " " + delaye + " " + "minutes"));
                        }
                             PermissionAttachment attachment = player.addAttachment(plugin,1200);
                             attachment.setPermission("voterestart.vote",false);

@@ -1,5 +1,6 @@
 package com.orang3i;
 
+import com.orang3i.iridium.IridiumColorAPI;
 import com.orang3i.voting.VoteExecutor;
 import com.orang3i.voting.VotingLogic;
 
@@ -23,6 +24,10 @@ public final class RestartVoteMain extends JavaPlugin {
 
     @Override
     public void onEnable() {
+
+       Logger.log(Logger.LogLevel.OUTLINE, "********************************************************************************");
+      Logger.log(Logger.LogLevel.SUCCESS, IridiumColorAPI.process("<GRADIENT:9281fb>Thank you for using VoteRestart!</GRADIENT:eb93fc>"));
+       Logger.log(Logger.LogLevel.OUTLINE, "********************************************************************************");
 
         instance = this;
 
