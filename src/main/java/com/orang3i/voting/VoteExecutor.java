@@ -44,8 +44,8 @@ public class VoteExecutor implements Listener {
 
       UARAPI.setInterval(UltimateAutoRestart.getInstance(), 60);
 
-      String announcement = plugin.getConfig().getString("announcement message.value");
-      boolean announceb = plugin.getConfig().getBoolean("announcement message.enabled");
+      String announcement = plugin.getConfig().getString("announcement_message.value");
+      boolean announceb = plugin.getConfig().getBoolean("announcement_message.enabled");
 
       for (Player player: Bukkit.getOnlinePlayers()) {
 
