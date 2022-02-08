@@ -58,7 +58,7 @@ public class VoteExecutor implements Listener {
         if (announceb) {
           Bukkit.broadcastMessage(IridiumColorAPI.process(IridiumColorAPI.process(announcement)));
         } else {
-          player.sendMessage(IridiumColorAPI.process("<GRADIENT:9281fb>VoteRestart</GRADIENT:eb93fc>" + " " + "<SOLID:FFFFFF>» Click on vote to delay the restart"));
+          player.sendMessage(IridiumColorAPI.process(plugin.getConfig().getString("prefix") + " " + "<SOLID:FFFFFF>» Click on vote to delay the restart"));
         }
         TextComponent message = new TextComponent(ChatColor.LIGHT_PURPLE + "vote");
         message.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/restartvote"));
