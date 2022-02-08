@@ -4,7 +4,6 @@ import com.orang3i.iridium.IridiumColorAPI;
 import com.orang3i.voting.VoteExecutor;
 import com.orang3i.voting.VotingLogic;
 
-
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -14,50 +13,39 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 
-
 public final class RestartVoteMain extends JavaPlugin {
 
-    private static RestartVoteMain instance;
+  private static RestartVoteMain instance;
 
-    public static int MAXR;
+  public static int MAXR;
 
+  @Override
+  public void onEnable() {
 
-    @Override
-    public void onEnable() {
+    Logger.log(Logger.LogLevel.OUTLINE, "********************************************************************************");
+    Logger.log(Logger.LogLevel.SUCCESS, IridiumColorAPI.process("<GRADIENT:9281fb>Thank you for using VoteRestart!</GRADIENT:eb93fc>"));
+    Logger.log(Logger.LogLevel.OUTLINE, "********************************************************************************");
 
-       Logger.log(Logger.LogLevel.OUTLINE, "********************************************************************************");
-      Logger.log(Logger.LogLevel.SUCCESS, IridiumColorAPI.process("<GRADIENT:9281fb>Thank you for using VoteRestart!</GRADIENT:eb93fc>"));
-       Logger.log(Logger.LogLevel.OUTLINE, "********************************************************************************");
+    instance = this;
 
-        instance = this;
+    saveDefaultConfig();
+    getServer().getPluginManager().registerEvents(new VoteExecutor(this), this);
 
+    new VotingLogic(this);
 
-        saveDefaultConfig();
-        getServer().getPluginManager().registerEvents(new VoteExecutor(this), this);
+    MAXR = getConfig().getInt("settings.maxDelays");
 
-        new VotingLogic(this);
+  }
 
-        MAXR = getConfig().getInt("settings.maxDelays");
+  @Override
 
+  public void onDisable() {
 
-    }
+  }
 
-    @Override
+  public static RestartVoteMain getInstance() {
 
-
-    public void onDisable() {
-
-
-    }
-
-
-
-
-    public static RestartVoteMain getInstance () {
-
-        return instance;
-    }
-
-
+    return instance;
+  }
 
 }
