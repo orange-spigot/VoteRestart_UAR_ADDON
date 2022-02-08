@@ -36,14 +36,14 @@ public class VotingLogic {
         double perc = config.getInt("settings.percentageOfVotesNeededToRestart");
         int vote_valuex = config.getInt("settings.numberOfVotesNeededToRestart");
         int delay = config.getInt("settings.delayTime");
-        String rs1v = config.getString("restart mode 1 message when someone votes.value");
-        boolean rs1vb = config.getBoolean("restart mode 1 message when someone votes.enabled");
-        String rs1d = config.getString("restart mode 1 message when number of votes needed to delay is reached.value");
-        boolean rs1db = config.getBoolean("restart mode 1 message when number of votes needed to delay is reached.enabled");
-        String rs2v = config.getString("restart mode 2 message when someone votes.value");
-        boolean rs2vb = config.getBoolean("restart mode 2 message when someone votes.enabled");
-        String rs2d = config.getString("restart mode 2 message when percentage of votes needed to delay is reached.value");
-        boolean rs2db = config.getBoolean("restart mode 2 message when percentage of votes needed to delay is reached.enabled");
+        String rs1v = config.getString("mode_1.value");
+        boolean rs1vb = config.getBoolean("mode_1.enabled");
+        String rs1d = config.getString("mode_1_delay_reached.value");
+        boolean rs1db = config.getBoolean("mode_1_delay_reached.enabled");
+        String rs2v = config.getString("mode_2.value");
+        boolean rs2vb = config.getBoolean("mode_2.enabled");
+        String rs2d = config.getString("mode_2_delay_reached.value");
+        boolean rs2db = config.getBoolean("mode_2_delay_reached.enabled");
         int vote_value = vote_valuex - 1;
 
         if (restartmode == 1) {
