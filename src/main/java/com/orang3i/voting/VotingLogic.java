@@ -55,7 +55,7 @@ public class VotingLogic {
               Bukkit.broadcastMessage(IridiumColorAPI.process(rs1v));
             } else {
 
-              Bukkit.broadcastMessage(IridiumColorAPI.process(plugin.getConfig().getString("prefix") + " " + "<SOLID:FFFFFF>»" + " " + "someone has voted to delay" + " " + "now there are" + " " + " " + VOTEONE + " " + "votes" + " " + vote_valuex + " " + "required to delay"));
+              Bukkit.broadcastMessage(IridiumColorAPI.process(plugin.getConfig().getString("prefix") + " " + "<SOLID:FFFFFF>someone has voted to delay" + " " + "now there are" + " " + " " + VOTEONE + " " + "votes" + " " + vote_valuex + " " + "required to delay"));
             }
             Player player = (Player) sender;
             PermissionAttachment attachment = player.addAttachment(plugin, 1200);
@@ -69,7 +69,7 @@ public class VotingLogic {
               if (rs1db) {
                 player.sendMessage(IridiumColorAPI.process(rs1d));
               } else {
-                player.sendMessage(IridiumColorAPI.process(plugin.getConfig().getString("prefix") + " " + "<SOLID:FFFFFF>»" + " " + "number of votes to restart reached delaying restart by" + " " + delaye + " " + "minutes"));
+                player.sendMessage(IridiumColorAPI.process(plugin.getConfig().getString("prefix") + " " + "<SOLID:FFFFFF>number of votes to restart reached delaying restart by" + " " + delaye + " " + "minutes"));
               }
               VOTEONE = 0;
               UARAPI.setInterval(UltimateAutoRestart.getInstance(), delay);
@@ -90,7 +90,7 @@ public class VotingLogic {
               if (rs2vb) {
                 player.sendMessage(IridiumColorAPI.process(rs2v));
               } else {
-                player.sendMessage(IridiumColorAPI.process(plugin.getConfig().getString("prefix") + " " + "<SOLID:FFFFFF>»" + " " + "someone has voted to delay" + " " + "now there are" + " " + perce + "%" + " " + "votes" + " " + perc + "%" + " " + "required to delay"));
+                player.sendMessage(IridiumColorAPI.process(plugin.getConfig().getString("prefix") + " " + "<SOLID:FFFFFF>someone has voted to delay" + " " + "now there are" + " " + perce + "%" + " " + "votes" + " " + perc + "%" + " " + "required to delay"));
               }
             }
 
@@ -103,7 +103,7 @@ public class VotingLogic {
               if (rs2db) {
                 player.sendMessage(IridiumColorAPI.process(rs2d));
               } else {
-                player.sendMessage(IridiumColorAPI.process(plugin.getConfig().getString("prefix") + " " + "<SOLID:FFFFFF>»" + " " + "percentage  of votes to restart reached delaying restart by" + " " + delaye + " " + "minutes"));
+                player.sendMessage(IridiumColorAPI.process(plugin.getConfig().getString("prefix") + " " + "<SOLID:FFFFFF>percentage  of votes to restart reached delaying restart by" + " " + delaye + " " + "minutes"));
               }
               PermissionAttachment attachment = player.addAttachment(plugin, 1200);
               attachment.setPermission("voterestart.vote", false);

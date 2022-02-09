@@ -135,7 +135,7 @@ public abstract class CommandBase extends BukkitCommand implements CommandExecut
 
         delayedPlayers.remove(player.getName());
 
-      }, 20 L * delay);
+      }, 20L * delay);
     }
 
     if (!onCommand(sender, arguments)) {
