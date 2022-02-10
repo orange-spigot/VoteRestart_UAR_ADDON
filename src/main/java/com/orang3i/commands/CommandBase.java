@@ -25,6 +25,8 @@ public abstract class CommandBase extends BukkitCommand implements CommandExecut
   private final int maxArguments;
 
   private final boolean playerOnly;
+  
+  String cooldown = config.getString("cooldown");
 
   public CommandBase(String command) {
 
@@ -115,7 +117,7 @@ public abstract class CommandBase extends BukkitCommand implements CommandExecut
     String permisssion = getPermission();
 
     if (permisssion != null && !sender.hasPermission(permisssion)) {
-      Msg.send(sender, "please wait before clicking this again");
+      Msg.send(sender, IridiumColorAPI.process(plugin.getConfig().getString("prefix") + " " + "<SOLID:FFFFFF>" + "cooldown"));
       return true;
     }
 
@@ -124,7 +126,7 @@ public abstract class CommandBase extends BukkitCommand implements CommandExecut
       Player player = (Player) sender;
       if (delayedPlayers.contains(player.getName())) {
 
-        Msg.send(player, "please wait before clicking this again");
+        Msg.send(player, IridiumColorAPI.process(plugin.getConfig().getString("prefix") + " " + "<SOLID:FFFFFF>" + "cooldown"));
 
         return true;
       }
