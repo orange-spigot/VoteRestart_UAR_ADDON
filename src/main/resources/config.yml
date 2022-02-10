@@ -22,6 +22,7 @@ settings:
 #leave the enabled field empty to display default message
 prefix: "<GRADIENT:9281fb>VoteRestart</GRADIENT:eb93fc> <SOLID:FFFFFF>»"
 cooldown: "Please wait before clicking again."
+click_to_vote: "Click on vote to delay the restart"
 announcement_message:
   enabled: false
   value: "<GRADIENT:9281fb>Click on vote to delay the restart</GRADIENT:eb93fc>"
