@@ -24,7 +24,7 @@ import java.util.UUID;
 public class VoteExecutor implements Listener {
 
   private RestartVoteMain plugin;
-
+ 
   public VoteExecutor(RestartVoteMain pl) {
 
     plugin = pl;
@@ -43,9 +43,12 @@ public class VoteExecutor implements Listener {
     if (plugin.MAXR > 0) {
 
       UARAPI.setInterval(UltimateAutoRestart.getInstance(), 60);
+      
+      FileConfiguration config = plugin.getConfig();
 
-      String announcement = plugin.getConfig().getString("announcement_message.value");
-      boolean announceb = plugin.getConfig().getBoolean("announcement_message.enabled");
+      String announcement = config.getString("announcement_message.value");
+      boolean announceb = config.getBoolean("announcement_message.enabled");
+      String click_to_vote = config.getString("click_to_vote");
 
       for (Player player: Bukkit.getOnlinePlayers()) {
 
@@ -58,7 +61,7 @@ public class VoteExecutor implements Listener {
         if (announceb) {
           Bukkit.broadcastMessage(IridiumColorAPI.process(IridiumColorAPI.process(announcement)));
         } else {
-          player.sendMessage(IridiumColorAPI.process(plugin.getConfig().getString("prefix") + " " + "<SOLID:FFFFFF>Click on vote to delay the restart"));
+          player.sendMessage(IridiumColorAPI.process(plugin.getConfig().getString("prefix") + " " + "<SOLID:FFFFFF>" + click_to_vote));
         }
         TextComponent message = new TextComponent(ChatColor.LIGHT_PURPLE + "vote");
         message.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/restartvote"));
