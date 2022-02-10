@@ -21,6 +21,7 @@ settings:
 #on the value field below enter message for informing the user that the vote has been restarted and how to vote
 #leave the enabled field empty to display default message
 prefix: "<GRADIENT:9281fb>VoteRestart</GRADIENT:eb93fc> <SOLID:FFFFFF>»"
+cooldown: "Please wait before clicking again."
 announcement_message:
   enabled: false
   value: "<GRADIENT:9281fb>Click on vote to delay the restart</GRADIENT:eb93fc>"
